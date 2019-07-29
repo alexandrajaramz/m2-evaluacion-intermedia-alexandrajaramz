@@ -20,20 +20,21 @@ console.log(`Mi número aleatorio es ${myRandomNumber}`);
 //4. comparar el número que el usuario ha escrito en el input con el número aleatorio, y pintar el feedback correspondiente en la pantalla ("demasiado alto", "demasiado bajo", "¡HAS GANADO, CAMPEONA!")
 function comparingNumbers () {
     console.log(inputNumber.value);
-    if (inputNumber.value === myRandomNumber) {
-        const youWin = '¡HAS GANADO, CAMPEONA!';
-        console.log (youWin);
-        messages.innerHTML = youWin;
+    if (inputNumber.value < myRandomNumber) {
+        const lowNumber = 'Demasiado bajo';
+        console.log (lowNumber);
+        messages.innerHTML = lowNumber;
     } else if (inputNumber.value > myRandomNumber) {
         const highNumber = 'Demasiado alto';
         console.log (highNumber);
         messages.innerHTML = highNumber;
-    } else if (inputNumber.value < myRandomNumber) {
-        const lowNumber = 'Demasiado bajo';
-        console.log (lowNumber);
-        messages.innerHTML = lowNumber;
+    } else {
+        const youWin = '¡HAS GANADO, CAMPEONA!';
+        console.log (youWin);
+        messages.innerHTML = youWin;
     }
 }
+
 
 buttonTry.addEventListener('click', comparingNumbers);
 
