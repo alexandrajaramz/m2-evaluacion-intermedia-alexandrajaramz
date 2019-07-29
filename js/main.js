@@ -3,11 +3,7 @@
 const inputNumber = document.querySelector('.input');
 const buttonTry = document.querySelector('.btn');
 const messages = document.querySelector('.tracks__content');
-
-/* 
-En la parte principal, el jugador introduce un número y da al botón de "prueba". En la parte azul aparecen las
-pistas sobre si es muy alto o bajo, o si lo ha conseguido. En rojo en la esquina superior derecha aparece el
-número de intentos realizados. Cuando consigue acertar, el juego termina. */
+const counter =  document.querySelector('.count__number');
 
 // generar un número aleatorio con la ayuda de Math.random y Math.ceil, y mostrarlo por la consola
 function getRandomNumber(max) {
@@ -42,7 +38,10 @@ function comparingNumbers () {
 buttonTry.addEventListener('click', comparingNumbers);
 
 //5. actualizar el contador de intentos cada vez que el usuario pruebe 
+function counterAdd () {
+    let counter = 0;
+    console.log(counter += 1);
+}
 
 
-
-
+buttonTry.addEventListener('click', counterAdd);
