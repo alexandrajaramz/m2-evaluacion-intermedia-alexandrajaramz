@@ -2,4 +2,27 @@ body {
     margin: 0;
     background-color: lightgray;
     text-align: center;
+    height: 100vh;
+    position: relative;
+}
+
+.main__content {
+    transform: translateY(80px);
+}
+
+.tracks {
+    transform: translateY(180px);
+    text-align: center;
+    border: solid 2px blue;
+    width: 70vw;
+}
+
+.tracks__content {
+    color: blue;
+}
+
+.count {
+    position: absolute;
+    top: 0;
+    right: 20px;
 }
