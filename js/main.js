@@ -3,7 +3,7 @@
 const inputNumber = document.querySelector('.input');
 const buttonTry = document.querySelector('.btn');
 const messages = document.querySelector('.tracks__content');
-const counter =  document.querySelector('.count__number');
+const counter =  document.querySelector('.count');
 
 function getRandomNumber(max) {
   return Math.ceil(Math.random() * max);
@@ -31,9 +31,10 @@ function comparingNumbers () {
 
 buttonTry.addEventListener('click', comparingNumbers);
 
+let i = 0;
 function counterAdd () {
-    let counter = 0;
-    console.log(counter + 1);
+ i += 1;
+ counter.innerHTML = i;
 }
 
 buttonTry.addEventListener('click', counterAdd);
