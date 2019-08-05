@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,21 +8,27 @@
     <title>G-m2 - Evaluación intermedia - Alexandra Jara</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
-    <header>
-        <h1 class="title">Adivina el número</h1>
-    </header>
 
+<body class="page">
+    
     <main class="main">
+        <h1 class="title">Adivina el número</h1>
         <section class="main__content">
-            <label for="userTry">Escribe aquí tu número</label>
+            <label class="label" for="userTry">Escribe aquí tu número</label>
             <input class="input" type="text" name="userTry" id="userTry">
-            <button class="btn">Prueba</button>
+
         </section>
-        <div class="tracks__content"><p class="explain">Escribe un número y dale a Prueba</p></div>
+        <div class="buttons">
+            <button class="btn">Prueba</button>
+            <button class="reset">Reiniciar juego</button></div>
+        <div class="tracks__content">
+            <p class="explain">Escribe un número y dale a Prueba</p>
+        </div>
         <div class="count">0</div>
+
     </main>
 
     <script src="js/main.js"></script>
 </body>
+
 </html>

@@ -4,11 +4,14 @@ const input = document.querySelector('.input');
 const buttonTry = document.querySelector('.btn');
 const messages = document.querySelector('.explain');
 const counter =  document.querySelector('.count');
-const myRandomNumber = getRandomNumber(100);
+const reset = document.querySelector('.reset');
+let myRandomNumber = getRandomNumber(100);
 
 function getRandomNumber(max) {
   return Math.ceil(Math.random() * max);
 }
+
+console.log(myRandomNumber);
 
 function comparingNumbers () {
     const stringValue = input.value;
@@ -49,5 +52,14 @@ function fakeClick (event) {
     }
 }
 
+function resetInfo (event) {
+    input.value = '';
+    i = 0;
+    messages.innerHTML = 'Escribe un número y dale a Prueba';
+    myRandomNumber = getRandomNumber(100);   
+    console.log(myRandomNumber);
+}
+
 buttonTry.addEventListener('click', gameStart);
 input.addEventListener('keyup', fakeClick);
+reset.addEventListener('click', resetInfo);
